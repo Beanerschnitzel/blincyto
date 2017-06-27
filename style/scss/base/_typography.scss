@@ -4,17 +4,13 @@
 
 
 sup {
-	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-	top: -.45em;
-	font-size: 70%;
-}
-
-h1 sup {
+	//font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	top: -.65em;
 	font-size: 50%;
-	vertical-align: 10px;
 }
-
-h2 sup {
-	font-size: 50%;
-	vertical-align: 10px;
+h1, h2, h3, h4 {
+	sup {
+		font-size: 40%;
+		vertical-align: 7px;
+	}
 }

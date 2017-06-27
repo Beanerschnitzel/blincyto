@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+	head
+		- var page = { home: "is-current", rasStory: "", firstLine: "", thirdLine: "", administration: "", patientProfiles: "", access: "", generic: "", paidHome: "" };
+		include includes/_head.pug
+		title Blincyto
+
+	body.home
+		form
+			.pageWrap
+				include includes/_notifyMain.pug
+				include includes/_headerMain.pug
+				main
+					section.splashHero.fillColorBrandBlue
+						.container
+							.splashHero-lede
+								|For adult patients with Ph– relapsed or refractory B-cell precursor acute lymphoblastic leukemia (ALL)
+							h2.splashHero-heading
+								|BLINCYTO
+								sup &reg;
+								|  is the 
+								strong first and only 
+								| immunotherapy
+								br
+								|  to demonstrate OVERALL SURVIVAL
+								br
+								| vs standard-of-care chemotherapy
+								sup 1-4
+							p.mb-1
+								strong Check back soon for the complete BLINCYTO
+								sup &reg;
+								| story.
+							p In the meantime, you may wish to to access some of the resources below:
+							ul.splashHero-nav
+								li.splashHero-navItem
+									a(href='').splashHero-navLink Updated Prescribing Information
+								li.splashHero-navItem
+									a(href='').splashHero-navLink Press release
+								li.splashHero-navItem
+									a(href='').splashHero-navLink Product fact sheet
+								li.splashHero-navItem
+									a(href='').splashHero-navLink AMGEN ASSIST 360
+										sup TM
+
+
+					include includes/_notifyTray.pug
+				include includes/_footerMain.pug
+

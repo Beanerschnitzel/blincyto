@@ -1,9 +1,10 @@
 $(document).ready(function() {
-   $('.notifyMain-copy').truncateText({
-      lengthLg: 300,
-      lengthMed: 200,
-      lengthSm: 120,
-      toggleText: "Read More"
+   $('.notifyMain-content').truncateText({
+      lengthLg: 1000,
+      lengthMed: 1000,
+      lengthSm: 1000,
+      //removed toggletext for splash page. Add text for full site design
+      toggleText: ""
    });
 
    $('.notifyMain').addClass('slideDown');
@@ -15,7 +16,7 @@ $(document).ready(function() {
 
    $(window).scroll(function() {
       if (!$('.notifyMain').hasClass('is-closed') && $(this).scrollTop() > 10) {
-         $('.notifyMain').addClass('is-closed')
+         $('.notifyMain').addClass('is-closed');
       }
    });
 });
@@ -83,9 +84,9 @@ $(document).ready(function() {
             var originalHtml = $container.html();
             var originalText = $container.text();
             var truncatedText = $(originalHtml.substring(0, visibleLegnthEffective));
-            var $showMore = $('<a class="showToggle" style="margin-left:5px;font-weight:bold;cursor:pointer;">' + toggleText + '</a>' + '<i class="colorBrandBlue fa-chevron-right ml-1">' + '</i>')
-
-            truncatedText.append($('<i class="ellipse">...</i>')).append($showMore);
+            var $showMore = $('<a class="showToggle" style="margin-left:5px;font-weight:bold;cursor:pointer;">' + toggleText + '</a>' + '<i class="colorBrandBlue fa-chevron-right ml-1">' + '</i>');
+            //commented out for splash page. Uncomment for full site design
+            //truncatedText.append($('<i class="ellipse">...</i>')).append($showMore);
             $container.html(truncatedText);
 
             truncHeight = $container.outerHeight();
@@ -101,7 +102,7 @@ $(document).ready(function() {
                $container.css('max-height', $container.attr('data-maxHeight') + 'px');
                $container.html(originalHtml);
             });
-            $('.openNotifyMain').click(function(e) {
+            $(document).on('click', '.openNotifyMain', function(e) {
                e.preventDefault();
 
                $container.css('max-height', $container.attr('data-maxHeight') + 'px');

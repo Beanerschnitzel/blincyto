@@ -22,6 +22,9 @@ img {
 	max-width:100%;
 	height:auto;
 }
+b, strong {
+	font-weight:700;
+}
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing

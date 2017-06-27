@@ -67,6 +67,7 @@
   font-family:'GothamCondensed';
 }
 .inlined {
+  margin-bottom:$spacer;
   * {
       display:inline;
       padding:0;
@@ -96,9 +97,17 @@
   font-size:20px !important;
   line-height:1.4;
 }
+.textXLg {
+  font-size:24px !important;
+  line-height:1.4;
+}
 .normalWeight {
   font-weight:normal !important;
 }
+.lightWeight {
+  font-weight:300 !important;
+}
+
 .list--spaced {
   li {
     margin-bottom:.75em;
@@ -133,7 +142,6 @@ ul.list--largeSpacing {
 .pr-05 {
   padding-right: .125rem;
 }
-
 
 .nowrap{
   white-space: nowrap;

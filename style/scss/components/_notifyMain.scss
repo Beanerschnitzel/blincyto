@@ -1,9 +1,24 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to global notify message.
 // -----------------------------------------------------------------------------
+
+/*
+ * !!! start temp style for the splash page. Remove for full site design
+*/
+.notifyMain-content {
+	display:flex;
+	align-items:center;
+}
+.showToggle {
+	&, &:after {
+		display:none;
+	}
+}
+/*
+ * !!! end temp style for the splash page. Remove for full site design
+*/
 .showToggle {
 	color:palette(colorBrandBlue,base) !important;
-	color:red;
 }
 .notifyMain {
 	background:$notifyMain-background;
@@ -42,38 +57,11 @@
 	color:$notifyMain-heading-color;
 	font-size:$notifyMain-heading-size;
 	margin-bottom:0;
-	text-transform:uppercase;
+	font-weight:normal;
 }
 .notifyMain-content {
 	@extend %noPhatBottom;
-	
-	// .hidden-content {
-	// 	transition: all .5s ease-in-out;
-	// 	  // position: stati;
-	// 	  // width: 1px;
-	// 	  // height: 1px;
-	// 	  // padding: 0;
-	// 	  // overflow: hidden;
-	// 	  // clip: rect(0,0,0,0);
-	// 	  // white-space: nowrap;
-	// 	  // clip-path: inset(50%);
-	// 	  // border: 0;
- //  		&.is-hidden {
-	// 	  position: absolute;
-	// 	  width: 1px;
-	// 	  height: 1px;
-	// 	  padding: 0;
-	// 	  overflow: hidden;
-	// 	  clip: rect(0,0,0,0);
-	// 	  white-space: nowrap;
-	// 	  clip-path: inset(50%);
-	// 	  border: 0;
- //  		}
-	// }
 }
-// .notifyMain-copy span {
-// 	//display:none;
-// }
 .notifyMain-toggle {
 	display:inline-block;
 	color:$colorLinks;
@@ -107,6 +95,8 @@
 	&:before {
 		@extend %iconStyle;
 		margin:0;
-
+	}
+	@include media-breakpoint-up(lg) {
+		margin-top:-$spacer/2;
 	}
 }

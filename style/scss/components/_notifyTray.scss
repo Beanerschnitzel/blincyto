@@ -2,16 +2,19 @@
 // This file contains all styles related to global notify message.
 // -----------------------------------------------------------------------------
 .notifyTray {
-   padding-top: $spacer*4;
-   padding-bottom: $spacer*4;
+   padding-top: $spacer;
+   //padding-bottom: $spacer*2;
 
    transition: height .3s ease-in-out;
+   color:$colorBlack;
+   //position:relative;
+   font-size:14px;
    a {
       text-decoration: underline;
 
-      color: #0094ca;
+      color: inherit;
    }
-   //commented out so client can screenshot pages
+   // commenting out .is-sticky beahvior per splash comps
    &.is-sticky {
       position: fixed;
       z-index: 300;
@@ -19,7 +22,7 @@
       bottom: 0;
       left: 0;
 
-      overflow: hidden;
+      //overflow: hidden;
 
       height: 155px;
       padding: 0;
@@ -38,13 +41,13 @@
       ul,
       ol,
       li {
-         display: inline;
+         //display: inline;
       }
       h2 {
          font-size: 24px;
       }
       .notifyTray-inner {
-         overflow: hidden;
+         //overflow: hidden;
 
          max-width: $maxWidth;
          max-height: 100%;
@@ -88,20 +91,40 @@
 }
 .notifyTray-toggleLink {
    font-size: 14px;
+   position:relative;
+   cursor:pointer;
+      &:after {
+         content:'';
+         position:absolute;
+         right:0;
+         top:-26.5px;
+         width:20px;
+         height:20px;
+         background:$colorWhite;
+         transform:rotate(36.5deg) skewX(-20deg);
+         box-shadow: -1px -1px 0 palette(colorBrandBlue,base);
+         // top:calc(-#{$spacer} - 16px);
+         // height:0;
+         // width:0;
+         // border-right:22px solid transparent;
+         // border-bottom:16px solid $colorWhite;
+         // border-left:22px solid transparent;
+         // 
+      }
    &:hover {
       color: $notifyTray-toggle-hover-color;
    }
    &:before {
       @extend %iconStyle;
    }
-   .is-sticky & {
-      @extend .fa-plus;
-      padding-left: $spacer;
+   // .is-sticky & {
+   //    @extend .fa-plus;
+   //    padding-left: $spacer;
 
-      cursor: pointer;
+   //    cursor: pointer;
 
-      color: $notifyTray-toggle-color;
-   }
+   //    color: $notifyTray-toggle-color;
+   // }
    .full & {
       @extend .fa-minus;
    }

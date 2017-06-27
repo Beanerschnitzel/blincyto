@@ -23,12 +23,14 @@
 
 // 4. Layout-related sections
 @import
+  'layout/pageWrap',
   'layout/main',
   'layout/headerMain',
   'layout/footerMain';
 
 // 5. Components
 @import
+  'components/splashHero',
   'components/aside',
   'components/blurBox',
   'components/tabs',

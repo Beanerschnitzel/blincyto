@@ -14,7 +14,7 @@ $colorBrandBlue: #005677;
 $colorBrandOrange: #ffa409;
 //need to be replaced with real brand colors
 $colorBrandBlueDark: #166299;
-$colorBrandCyan: #4bc1e1;
+$colorBrandCyan: #337892;
 $colorGray: #b0b0b0;
 /*
 * Place brand colors and gray in map for shades
@@ -162,7 +162,7 @@ $btn-secondary-border-color: transparent;
 $notifyMain-background: $colorWhite;
 $notifyMain-color: inherit;
 $notifyMain-heading-color: map-get(map-get($palettes, 'colorBrandBlue'), 'base');
-$notifyMain-heading-size: 22px;
+$notifyMain-heading-size: 14px;
 $notifyMain-toggle-color: $colorWhite;
 $notifyMain-close-color: $colorWhite;
 $notifyMain-close-size: 26px;
@@ -171,7 +171,7 @@ $notifyMain-close-size: 26px;
 $headerMain-navUtilMobile-border-color:$colorWhite;
 $headerMain-util-background:map-get(map-get($palettes, 'colorGray'), 'lightest');
 
-$headerMain-navUtil-size: 16px;
+$headerMain-navUtil-size: 14px;
 $headerMain-navUtilLink-color: map-get(map-get($palettes, 'colorGray'), 'darker');
 $headerMain-navUtilLink-active-color: map-get(map-get($palettes, 'colorGray'), 'dark');
 
@@ -220,18 +220,18 @@ $notifyTray-toggle-color:map-get(map-get($palettes, 'colorBrandOrange'), 'base')
 $notifyTray-toggle-hover-color:map-get(map-get($palettes, 'colorBrandOrange'), 'base');
 
 // Main footer variables
-$footerMain-background: map-get(map-get($palettes, 'colorBrandBlueDark'), 'base');
+$footerMain-background: map-get(map-get($palettes, 'colorBrandCyan'), 'base');
 $footerMain-color: $colorWhite;
 $footerMain-size: 14px;
 
-$footerMain-main-border-color:map-get(map-get($palettes, 'colorBrandCyan'), 'base');
+$footerMain-main-border-color:rgba($colorWhite,.5);
 
 $footerMain-navLink-color:$colorWhite;
 $footerMain-navUtilLink-hover-color:$colorWhite;
 $footerMain-nav-size:14px;
 
-$footerMain-topLink-background:map-get(map-get($palettes, 'colorBrandOrange'), 'base');
-$footerMain-topLink-color:$colorWhite;
+$footerMain-topLink-background:map-get(map-get($palettes, 'colorGray'), 'lightest');
+$footerMain-topLink-color:map-get(map-get($palettes, 'colorGray'), 'darker');
 
 
 

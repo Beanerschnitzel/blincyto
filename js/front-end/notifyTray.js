@@ -3,7 +3,7 @@ $(document).ready(function() {
       console.log("DISABLED: Sticky ISI Footer");
       $('.notifyTray').removeClass('is-sticky');
    } else {
-      var placeholder = $('<div id="safteyInformation" class="js-notifyTrayPLaceholder"></div>');
+      var placeholder = $('<div id="safetyInformation" class="js-notifyTrayPLaceholder"></div>');
       var toggleText = $('.notifyTray-toggleLink').text();
 
       $('.notifyTray').before(placeholder);
