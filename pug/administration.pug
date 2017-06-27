@@ -1,0 +1,162 @@
+doctype html
+html(lang="en")
+	head
+		- var page = { home: "", rasStory: "", firstLine: "", thirdLine: "", administration: "is-current", patientProfiles: "", access: "", generic: "", paidHome: "" };
+		include includes/_head.pug
+		title Administration
+
+	body
+		form
+			.pageWrap
+				include includes/_notifyMain.pug
+				include includes/_headerMain.pug
+				main
+					.hero(style="background-image:url(img/content-images/hero.png)")
+						.hero-inner
+							.hero-copy
+								span.hero-zone1 In patients with WT 
+									em.pr-05 RAS
+									| * mCRC
+									sup 1
+								span.hero-zone2 Vectibix
+									sup &reg; 
+									| : The only FDA-approved, fully human
+									sup &dagger;
+									|  anti-EGFR monoclonal antibody
+									sup 1
+								span.hero-zone3
+									sup &dagger;
+									| Correlation with efficacy or safety is unknown.
+					.container.pt-13
+						.row
+							.col-lg-5
+								h2.colorBrandBlue Dose Modifications for
+									br
+									|Dermatologic Toxicity
+									sup 1
+								ul.colorGrayDarker.list--largeSpacing
+									li
+										| Upon the first occurrence of a grade 3 dermatologic reaction, withhold 1 to 2 doses of Vectibix
+										sup ®
+										| . If the reaction improves to < grade 3, reinitiate Vectibix
+										sup ®
+										|  at the original dose.
+									li
+										| Upon the second occurrence of a grade 3 dermatologic reaction, withhold 1 to 2 doses of Vectibix
+										sup ®
+										| . If the reaction improves to < grade 3, reinitiate Vectibix
+										sup ®
+										|  at 80% of the original dose.
+									li
+										| Upon the third occurrence of a grade 3 dermatologic reaction, withhold 1 to 2 doses of Vectibix
+										sup ®
+										| . If the reaction improves to < grade 3, reinitiate Vectibix
+										sup ®
+										|   at 60% of the original dose.
+									li
+										| Upon the fourth occurrence of a grade 3 dermatologic reaction, permanently discontinue Vectibix
+										sup ®
+										| .
+								p.colorGrayDarker
+									| Permanently discontinue Vectibix
+									sup.pr-05 &reg; 
+									| following the occurrence of a grade 4 dermatologic reaction or for a grade 3 dermatologic reaction that does not recover after withholding 1 or 2 doses.
+
+							.col-lg-7
+								.blurBox
+									h4.blurBox-heading 
+										| Dosing &amp; administration
+										sup 1
+									.blurBox-card
+										img(src='img/content-images/dosing-icon-1.png').blurBox-img.blurBox-img--letLg
+										p
+											| The recommended dose of Vectibix
+											sup &reg; 
+											| is 
+											strong 6 mg/kg 
+											| every 14 days.
+											sup 1
+									.blurBox-card
+										img(src='img/content-images/dosing-icon-2.png').blurBox-img
+										p
+											| No standardized premedication was required in clinical trials.
+											sup 1
+											|  The utility of premedication in preventing infusional toxicity is unknown.
+											sup 1
+									.blurBox-card
+										img(src='img/content-images/dosing-icon-2.png').blurBox-img
+										p
+											| No loading dose.
+											sup 1
+									h4.blurBox-heading 
+										| IV infusion
+										sup 1
+									.blurBox-card
+										img(src='img/content-images/dosing-icon-3.png').blurBox-img
+										p
+											| Vectibix
+											sup &reg;
+											|  is given by IV infusion over 60 minutes.
+											sup 1
+									.blurBox-card
+										img(src='img/content-images/dosing-icon-4.png').blurBox-img
+										p
+											| If the first infusion is tolerated, subsequent infusions may be administered over 30 to 60 minutes.
+											sup 1
+									.blurBox-card
+										img(src='img/content-images/dosing-icon-5.png').blurBox-img
+										p
+											| Doses of > 1,000 mg should be administered over 90 minutes.
+											sup 1
+									.blurBox-border
+						h2.colorBrandBlue.pt-13.mb-5
+							| Dose Modifications for Infusion Reactions
+							sup 1
+						ul.list--largeSpacing.colorGrayDarker
+							li
+								| Reduce infusion rate by 50% in patients experiencing a mild or moderate (grade 1 or 2) infusion reaction for the duration of that infusion.
+							li
+								| Terminate the infusion in patients experiencing severe infusion reactions. Depending on the severity and/or persistence of the reaction, permanently discontinue Vectibix
+								sup &reg;
+								| .
+						p.reference
+							span.pullSup *
+								| Defined as wild type in both 
+								em KRAS
+								|  and 
+								em NRAS
+								| .
+								sup 1
+								br
+								|  EGFR = epidermal growth factor receptor; IV = intravenous; mCRC = metastatic colorectal cancer; WT = wild type.
+						hr.hr--bold.my-13
+						h2.colorBrandBlue.mb-5
+							| Dermatologic toxicities
+							sup 1
+
+						img.mb-8(src="img/content-images/6206_9.Rash_grades_r2_RAS_CVA.svg")
+
+						
+						aside.mb-16
+							h6.mb-0.fontDefault WARNING: DERMATOLOGIC TOXICITY
+							p
+								strong 
+									u Dermatologic Toxicity:
+									|  Dermatologic toxicities occurred in 90% of patients and were severe (NCI-CTC grade 3 and higher) in 15% of patients receiving Vectibix monotherapy.
+						p.reference
+							| Grades defined by NCI-CTC/CTCAE.
+							sup 1
+							br
+							| NCI-CTC/CTCAE = National Cancer Institute-Common Toxicity Criteria/Common Terminology Criteria for Adverse Events.
+						include includes/_notifyTray.pug
+
+						.inlined.reference
+							h2.h6 Reference:
+							ol
+								li
+									|  Vectibix
+									sup &reg;
+									|  (panitumumab) prescribing information, Amgen; 6/2017.
+				include includes/_notifyTray.pug
+				include includes/_footerMain.pug
+

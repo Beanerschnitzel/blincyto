@@ -1,0 +1,226 @@
+doctype html
+html(lang="en")
+	head
+		- var page = { home: "", rasStory: "", firstLine: "", thirdLine: "", administration: "", patientProfiles: "is-current", access: "", generic: "", paidHome: "" };
+		include includes/_head.pug
+		title Patient Profiles
+	body
+		form
+			.pageWrap
+				include includes/_notifyMain.pug
+				include includes/_headerMain.pug
+				main
+					.hero.profiles(style="background-image:url(img/content-images/patient-hero.png)")
+						.hero-inner
+							.hero-copy
+								span.hero-zone Patient Profiles
+					section#roy.profile
+						.profile-header.mb-md-0
+							h2 First-line
+						.profile-content
+							.profile-content-left.roy
+								.profile-content-container.upper(data-lg="img/content-images/roy-large.png", data-sm="img/content-images/roy.png")
+									.overlay-content
+										.patient-info
+											.line
+												span Patient
+												span Roy*
+											.line
+												span Gender
+												span Male
+											.line
+												span Age
+												span 64
+											.line
+												span Occupation
+												span Middle-school teacher
+										.qualifier
+											span *A hypothetical case study of a patient eligible for first-line mCRC therapy.
+								.profile-content-container.roy.placeholder
+								.profile-content-container.orange
+									img(src="img/content-images/roy-scan.png")
+									p.reference.colorWhite ALT = alanine aminotransferase; AST = aspartate aminotransferase; CBC = complete blood count; CT = computed tomography; ECOG PS = Eastern Cooperative Oncology Group Performance Status; Hb = hemoglobin; mCRC = metastatic colorectal cancer; R0 resection = complete resection; WT = wild type. 
+							.profile-content-right.roy
+								.content
+									h3.mb-4 What clinical characteristics affect your first-line treatment decision?
+									p.lead Medical history
+									ul
+										li Mild hyperlipidemia, controlled on statin therapy
+									p.lead Presentation
+									ul
+										li 3-month history of worsening constipation, bloating, and blood in stool
+										li Colonoscopy confirmed 4 cm, nonobstructing mass in the left colon
+									p.lead Pathology report
+									ul
+										li Moderately differentiated adenocarcinoma
+									p.lead Performance status
+									ul
+										li ECOG PS = 1
+									p.lead Laboratory results
+									ul
+										li ALT: 70 U/L; AST: 180 U/L
+										li CBC: Moderate anemia (Hb: 9.2 g/dL)
+									p.lead Mutational status
+									ul
+										li WT 
+											em RAS 
+											| (wild type in both 
+											em KRAS 
+											|  and 
+											em NRAS)
+									p.lead Imaging results
+									ul
+										li CT scan indicated liver-limited metastases: 2 bilobar lesions (right: 3.5 cm; left: 6.5 cm)
+									p.lead Surgery consult on metastatic disease
+									ul
+										li Potentially resectable metastases, but not upfront R0 resection
+										li Surgeon feels metastatic disease is potentially #[span.nowrap resectable—treatment] goal is to downgrade the tumor
+									a.btn.btn-secondary.mt-4(href="") See first-line data
+					section.profile#brian.profile
+						.profile-header.mb-md-0
+							h2 First-line
+						.profile-content
+							.profile-content-left.brian
+								.profile-content-container.upper(data-lg="img/content-images/brian-large.png", data-sm="img/content-images/brian.png")
+									.overlay-content
+										.patient-info
+											.line
+												span Patient
+												span Brian*
+											.line
+												span Gender
+												span Male
+											.line
+												span Age
+												span 62
+											.line
+												span Occupation
+												span Auto mechanic
+										.qualifier
+											span *A hypothetical case study of a patient eligible for first-line mCRC therapy.
+								.profile-content-container.brian.placeholder
+								.profile-content-container.orange
+									div(style='margin-bottom: 35px;')
+										img(src="img/content-images/brian-scan.png" style='margin-bottom:0')
+										p.reference.colorWhite Images are shown for illustrative purposes only
+									p.reference.colorWhite ALT = alanine aminotransferase; AST = aspartate aminotransferase; CBC = complete blood count; CT = computed tomography; ECOG PS = Eastern Cooperative Oncology Group Performance Status; GERD = gastroesophageal reflux disease; Hb = hemoglobin; mCRC = metastatic colorectal cancer; WT = wild type. 
+							.profile-content-right.brian
+								.content
+									h3.mb-4 What clinical characteristics affect your first-line treatment decision?
+									p.lead Medical history
+									ul
+										li Mild GERD
+									p.lead Presentation
+									ul
+										li Sought medical treatment for frequent episodes of moderate/severe, right upper quadrant pain
+										li Patient also complains of shortness of breath and pleuritic pain. Pain has noticeably worsened over the last month
+										li Taking frequent pain medication
+										li Colonoscopy indicated a 5 cm, nonobstructing mass in sigmoid colon
+									p.lead Pathology report
+									ul
+										li Moderately differentiated adenocarcinoma
+									p.lead Performance status
+									ul
+										li ECOG PS = 1
+									p.lead Laboratory results
+									ul
+										li ALT: 100 U/L; AST: 210 U/L
+										li CBC: Mild/moderate anemia (Hb: 9.8 g/dL)
+										li Bilirubin: 1.8 mg/dL
+									p.lead Mutational status
+									ul
+										li WT 
+											em RAS 
+											| (wild type in both 
+											em KRAS 
+											| and 
+											em NRAS
+											| )
+									p.lead Imaging results
+									ul
+										li CT scan indicated diffuse, bulky metastatic involvement of lung and liver
+									p.lead Surgery consult on metastatic disease
+									ul
+										li Unresectable due to number of metastatic sites
+									a.btn.btn-secondary.mt-4(href="") See first-line data
+					section#connie.profile
+						.profile-header.mb-md-0
+							h2 Third-line
+						.profile-content.pb-0
+							.profile-content-left.connie
+								.profile-content-container.tall.upper(data-lg="img/content-images/connie-large.png", data-sm="img/content-images/connie.png")
+									.overlay-content
+										.patient-info
+											.line
+												span Patient
+												span Connie*
+											.line
+												span Gender
+												span Female
+											.line
+												span Age
+												span 68
+											.line
+												span Occupation
+												span Salesperson
+										.qualifier
+											span *A hypothetical case study of a patient eligible for third-line mCRC therapy.
+									.health-data.connie
+										p.reference.colorWhite ALT = alanine aminotransferase; AST = aspartate aminotransferase; CBC = complete blood count; CT = computed tomography; ECOG PS = Eastern Cooperative Oncology Group Performance Status; Hb = hemoglobin; mCRC = metastatic colorectal cancer; PLT = platelet; WBC = white blood cell count; WT = wild type. 
+								.profile-content-container.connie.placeholder
+							.profile-content-right.connie
+								.content
+									h3.mb-4 What clinical characteristics affect your third-line treatment decision?
+									p.lead Medical history
+									ul
+										li Osteoarthritis
+									p.lead Presentation
+									ul
+										li Initial presentation of mild abdominal discomfort and mild anemia
+										li Colonoscopy revealed a nonobstructing mass in the left colon
+										li CT scan revealed liver and lung metastases that were unresectable
+									p.lead Prior therapy
+									ul
+										li
+											| First-line treatment: FOLFOX + bevacizumab
+											ul.list-unstyled
+												li &ndash; Progressed on therapy after 9 months
+										li
+											| Second-line treatment: FOLFIRI + bevacizumab
+											ul.list-unstyled
+												li &ndash; Progressed on therapy after 7 months with liver and lung metastases
+									p.lead Performance status
+									ul
+										li ECOG PS = 1
+									p.lead Laboratory results
+									ul
+										li ALT: 135 U/L; AST: 250 U/L
+										li
+											| CBC
+											ul.list-unstyled
+												li &ndash; WBC: 4.0 x 10#[sup 3] mL/µL
+												li &ndash; Neutrophil: 1.6 x 10#[sup 3] mL/µL
+												li &ndash; Hb: 9.0 g/dL
+												li &ndash; PLT: 125 x 10#[sup 3] mL/µL
+										li Bilirubin: 1.8 mg/dL
+									p.lead Mutational status
+									ul
+										li
+											| WT 
+											em RAS 
+											| (wild type in both 
+											em KRAS 
+											| and 
+											em NRAS
+											| )
+									p.lead Imaging results
+									ul
+										li CT scan indicated diffuse metastatic involvement of lung and liver
+									p.lead Surgery consult on metastatic disease
+									ul
+										li Unresectable due to number of metastatic sites
+									a.btn.btn-secondary.mt-4(href="") See third-line data
+									.health-data-placeholder.connie
+				include includes/_notifyTray.pug
+				include includes/_footerMain.pug
+

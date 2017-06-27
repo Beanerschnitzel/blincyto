@@ -1,0 +1,142 @@
+.blurBox {
+   position: relative;
+
+   display: flex;
+
+   flex-direction: column;
+   flex-wrap: wrap;
+   @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      & {
+         transition: .2s ease;
+      }
+      .is-blurred {
+         filter: blur(5px); /* Someday, sigh ... */
+         -webkit-filter: blur(5px); /* Prefixed CSS3 blur filters */
+         -moz-filter: blur(5px);
+         -o-filter: blur(5px);
+         -ms-filter: blur(5px);
+         //filter: url(#blur); /* Firefox needs SVG */
+         filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5'); /* IE lte 9 */
+      }
+   }
+}
+.blurBox-border {
+   position: absolute;
+   z-index: -1;
+   top: -1px;
+   right: -1px;
+   bottom: -1px;
+   left: -1px;
+
+   border: 1px solid palette(colorBrandOrange,base);
+}
+.blurBox-card {
+   position: relative;
+   z-index: 1;
+
+   display: flex;
+
+   flex: 0 0 100%;
+   align-items: center;
+
+   padding: $spacer*2;
+
+   transition: .2s ease;
+   font-size: 14px;
+   line-height: 1.3;
+
+   background: $colorWhite;
+   &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+
+      width: 75%;
+      height: 0;
+
+      content: '';
+      transform: translateX(-50%);
+
+      border-top: 1px solid palette(colorGray,lighter);
+   }
+   &:nth-of-type(3) {
+      &:after {
+         display: none;
+      }
+   }
+   p {
+      margin-bottom: 0;
+   }
+   @include media-breakpoint-up(lg) {
+      display: block;
+
+      flex: 0 0 33.333%;
+
+      max-width: 33.333%;
+      &:after {
+         position: absolute;
+         top: 50%;
+         left: 0;
+
+         width: 0;
+         height: 75%;
+
+         content: '';
+         transform: translateY(-50%);
+
+         border-right: 1px solid palette(colorGray,lighter);
+      }
+      &:nth-of-type(3) {
+         &:after {
+            display: block;
+         }
+      }
+      &:nth-of-type(3n+1) {
+         &:after {
+            display: none;
+         }
+      }
+      &.is-active {
+         z-index: 200;
+
+         transform: scale(1.05);
+
+         box-shadow: 1px 11px 15px 10px rgba($colorBlack,.2);
+         &:after {
+            display: none;
+         }
+      }
+   }
+}
+
+.blurBox-img {
+   display: block;
+
+   flex: 0 1 auto;
+
+   max-width: 85px;
+   margin-right: $spacer*1.5;
+   &.blurBox-img--letLg {
+      max-width: 95px;
+      margin-right: $spacer*1;
+   }
+   @include media-breakpoint-up(lg) {
+      max-width: 70%;
+      margin: 0 auto $spacer*1.5 auto;
+      &.blurBox-img--letLg {
+         max-width: 85.25%;
+      }
+   }
+}
+.blurBox-heading {
+   flex: 0 0 100%;
+
+   max-width: 100%;
+   padding: $spacer/2;
+
+   font-size: 20px;
+
+   color: $colorWhite;
+   background: palette(colorBrandOrange,base);
+}

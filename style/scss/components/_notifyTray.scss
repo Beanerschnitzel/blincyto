@@ -1,0 +1,108 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to global notify message.
+// -----------------------------------------------------------------------------
+.notifyTray {
+   padding-top: $spacer*4;
+   padding-bottom: $spacer*4;
+
+   transition: height .3s ease-in-out;
+   a {
+      text-decoration: underline;
+
+      color: #0094ca;
+   }
+   //commented out so client can screenshot pages
+   &.is-sticky {
+      position: fixed;
+      z-index: 300;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      overflow: hidden;
+
+      height: 155px;
+      padding: 0;
+
+      line-height: 1.4;
+
+      border-top: 1px solid palette(colorBrandBlue,base);
+      background: $colorWhite;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      ul,
+      ol,
+      li {
+         display: inline;
+      }
+      h2 {
+         font-size: 24px;
+      }
+      .notifyTray-inner {
+         overflow: hidden;
+
+         max-width: $maxWidth;
+         max-height: 100%;
+         margin-right: auto;
+         margin-left: auto;
+         padding: $spacer $spacer 0 $spacer;
+      }
+   }
+   &.full {
+      overflow: scroll;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      ul,
+      ol {
+         display: block;
+      }
+      li {
+         display: list-item;
+      }
+      .notifyTray-inner {
+         overflow: visible;
+
+         max-height: none;
+      }
+   }
+}
+
+.notifyTray-toggle {
+   display: none;
+   .is-sticky & {
+      display: block;
+
+      text-align: right;
+      text-transform: uppercase;
+   }
+}
+.notifyTray-toggleLink {
+   font-size: 14px;
+   &:hover {
+      color: $notifyTray-toggle-hover-color;
+   }
+   &:before {
+      @extend %iconStyle;
+   }
+   .is-sticky & {
+      @extend .fa-plus;
+      padding-left: $spacer;
+
+      cursor: pointer;
+
+      color: $notifyTray-toggle-color;
+   }
+   .full & {
+      @extend .fa-minus;
+   }
+}

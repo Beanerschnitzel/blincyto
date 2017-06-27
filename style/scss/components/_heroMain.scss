@@ -1,0 +1,93 @@
+.heroMain {
+    min-height: 450px;
+    background-position: center;
+    background-repeat:no-repeat;
+    display: flex;
+    background-size:cover;
+    flex-direction: column;
+    background-position: left 0;
+    @include media-breakpoint-up(lg) {
+    	min-height: 450px;
+    	background-position: center 42%;
+    	margin-top: -100px;
+        // .header-sticky & {
+        //     margin-top:0;
+        // }
+    }
+}
+
+.heroMain-inner {
+    width: 100%;
+    max-width: $maxWidth;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    padding-bottom: 350px;
+    @include media-breakpoint-up(lg) {
+	    align-items: flex-start;
+        padding-top: 190px;
+        padding-bottom: 0px;
+	    justify-content: flex-end;
+        align-self: center;
+    }
+}
+
+.heroMain-copy {
+    color: palette(colorBrandOrange, light);
+    padding-top:$spacer*2;
+    text-shadow:0 0 30px rgba(palette(colorBrandBlueDark,base),.75);
+    position:relative;
+    text-align:center;
+    width:100%;
+    span.hidden {
+        font-size: 0;
+        width: 0;
+        height: 0;
+        display: inline-block;
+        overflow: hidden;
+    }
+    @include media-breakpoint-up(lg) {
+    	text-align:left;
+        margin-left: 400px;
+    	padding-top:0;
+    	padding-bottom:$spacer*5;
+    }
+}
+
+.heroMain-zone1 {
+    display: block;
+    letter-spacing:2px;
+    line-height: 1;
+    padding-right:$spacer/2;
+    @include responsive-font(2.5vw, 28px, 32px, 32px);
+    sup {
+    	vertical-align:7px;
+    	position:static;
+    }
+}
+
+.heroMain-zone2 {
+    display: none;
+    @include media-breakpoint-up(lg) {
+    	display:inline;
+    }
+}
+
+.heroMain-zone3 {
+    display: block;
+    font-size: 75px;
+    line-height: 1;
+    font-family:GothamBlack;
+    @include responsive-font(6vw, 50px, 75px, 75px);
+}
+
+.heroMain-zone4 {
+    display: none;
+    @include media-breakpoint-up(lg) {
+	    display: block;
+	    text-align: right;
+	    color: $colorWhite;
+	    font-weight:normal;
+	    font-size:26px;
+    }
+}

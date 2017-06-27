@@ -1,0 +1,264 @@
+doctype html
+html(lang="en")
+	head
+		- var page = { home: "", rasStory: "", firstLine: "is-current", thirdLine: "", administration: "", patientProfiles: "", access: "", generic: "", paidHome: "" };
+		include includes/_head.pug
+		title First Line Data
+
+	body
+		form
+			.pageWrap
+				include includes/_notifyMain.pug
+				include includes/_headerMain.pug
+				main
+					.hero(style="background-image:url(img/content-images/hero.png)")
+						.hero-inner
+							.hero-copy
+								span.hero-zone1 In the first-line treatment of patients with WT
+									em.px-1 RAS
+									span *
+									|  mCRC
+									sup 1 
+								span.hero-zone2 Vectibix
+									sup &reg;
+									|: The first and only anti-EGFR approved in combination with FOLFOX
+									sup 1
+					section#prime.py-12
+						.container
+							h2.colorBrandBlue.mb-5
+								| PRIME: A phase 3, open-label, randomized (1:1), multicenter study of Vectibix
+								sup &reg;
+								|  Q2W + FOLFOX vs FOLFOX Q2W alone in first-line patients
+								sup 1,2
+							figure.mb-5
+								img(src='img/content-images/first-line-chart-1-sm.svg').d-md-none
+								img(src='img/content-images/first-line-chart-1-lg.svg').d-none.d-md-block
+							ul.colorGrayDarker
+								li The primary analysis was conducted in WT 
+									em KRAS 
+									| (exon 2 in codons 12 and 13). In the post-hoc analysis in the WT #[em RAS] subgroup, 17% of patients harbored mutations in 
+									em KRAS 
+									| exons 3 or 4 or in 
+									em NRAS 
+									| exons 2, 3, and 4
+									sup 1
+
+							p.reference.mb-0
+								span.pullSup *
+									| Defined as wild type in both 
+									em KRAS 
+									| and 
+									em NRAS.
+									sup 1
+									br
+									sup.pullSup &dagger;
+									| Exon 2 in codons 12 and 13.
+									sup 1
+							p.reference EGFR = epidermal growth factor receptor; mCRC = metastatic colorectal cancer; MT = mutant type; PRIME = Panitumumab Randomized Trial in Combination With Chemotherapy for Metastatic Colorectal Cancer to Determine Efficacy; Q2W = every 2 weeks; WT = wild type.
+							h2.colorBrandBlue.my-5 Patient demographics and clinical characteristics
+								sup 1
+							.row.my-2
+								.col-md-9
+									table(width='100%').table--fiesta
+										thead
+											tr
+												th Demographic or clinical characteristic	
+												th WT 
+													em RAS
+													span.px-1 *
+													| mCRC
+										tbody
+											tr
+												th Male 
+												td 65% 
+											tr
+												th Race
+													ul.list-unstyled.normalWeight.pl-md-4.mb-0
+														li White
+														li Black
+														li Hispanic or Latino 
+												td 
+													ul.list-unstyled.pt-5.mb-0
+														li 91%
+														li 2%
+														li 5%
+											tr
+												th Colon cancer 
+												td 65%
+											tr
+												th Rectal cancer 
+												td 35%
+											tr
+												th ECOG PS 
+													ul.list-unstyled.normalWeight.pl-md-4.mb-0
+														li 0
+														li 1
+														li 2 
+												td
+													ul.list-unstyled.pt-5.mb-0
+														li 57%
+														li 37%
+														li 6%
+											tr
+												th Median age, years 
+												td 61
+							p.reference.mb-0
+								span.pullSup *
+									| Defined as wild type in both 
+									em KRAS 
+									| and 
+									em NRAS.
+									sup 1
+							p.reference ECOG PS = Eastern Cooperative Oncology Group Performance Status; mCRC = metastatic colorectal cancer; WT = wild type.
+					section#progression.py-12.fillGradientBlue
+						.container
+							.row
+								.col-md-9
+									p.colorBrandOrangeLight
+										| In the PRIME study#[sup 1]
+									h2.fontDefault.h1
+										| 27.8% improvement in median PFS with Vectibix#[sup &reg;] + FOLFOX#[sup 1]
+									hr.hr--fade
+									h3.h2.mb-5.mt-5
+										| Post-hoc analysis in the WT #[em RAS]#[span(style='padding-left: 0.15rem') *] subgroup in PRIME#[sup 1]
+							figure.mb-5.pullLeft
+								img(src='img/content-images/pfs-table-sm.png').d-md-none
+								img(src='img/content-images/pfs-table-lg.png').d-none.d-md-block
+							ul.mb-5.textLg
+								li There were no OS or PFS benefits in patients treated with Vectibix
+									sup &reg; 
+									| with 
+									em RAS
+									| -mutant mCRC
+									sup 1
+							p.reference.mb-0
+								span.pullSup *
+									| Defined as wild type in both 
+									em KRAS 
+									| and 
+									em NRAS.
+									sup 1
+							p.reference.mb-0
+								| CI = confidence interval; mCRC = metastatic colorectal cancer; OS = overall survival; PFS = progression-free survival; PRIME = Panitumumab Randomized Trial in Combination With Chemotherapy for Metastatic Colorectal Cancer to Determine Efficacy; WT = wild type.
+					section#responseRate.py-12
+						.container
+							.row
+								.col-md-9
+									p.colorBrandBlue
+										| In the PRIME study#[sup 1]
+									h2.colorBrandOrange.fontDefault.h1
+										| Vectibix
+										sup &reg; 
+										| + FOLFOX improved ORR vs FOLFOX alone#[sup 1]*
+									hr.hr--fade.colorBrandBlue
+									h3.h2.mb-5.colorBrandBlue
+										| ORR in patients with WT #[em RAS]#[sup(style='padding-left: .15rem !important;') &dagger;] mCRC in the PRIME study#[sup 1]
+							figure.mb-5
+								img(src='img/content-images/first-line-chart-3-sm.svg').d-md-none
+								img(src='img/content-images/first-line-chart-3-lg.svg').d-none.d-md-block.width80
+							p.reference.mb-0
+								span.pullSup *
+									| Objective tumor response was evaluated by blinded central radiology review using modified RECIST criteria.
+									sup 2
+									br
+									sup.pullSup &dagger;
+									| Defined as wild type in both 
+									em KRAS 
+									| and 
+									em NRAS.
+									sup 1
+							p.reference
+								| CI = confidence interval; mCRC = metastatic colorectal cancer; ORR = objective response rate; PRIME = Panitumumab Randomized Trial in Combination With Chemotherapy for Metastatic Colorectal Cancer to Determine Efficacy; RECIST = Response Evaluation Criteria in Solid Tumors; WT = wild type.
+					section#survival.py-12.fillGradientBlue
+						.container
+							p.colorBrandOrangeLight
+								| In a post-hoc analysis of Vectibix#[sup &reg;] + FOLFOX vs FOLFOX alone#[sup 1]
+							h2.fontDefault.h1
+								| 5.6-month increase in median OS
+								sup 1* 
+							hr.hr--fade
+
+							figure.mb-8
+								img(src='img/content-images/first-line-chart-4-sm.png').d-md-none
+								img(src='img/content-images/first-line-chart-4-lg.png').d-none.d-md-block
+							ul.mb-5.mt-0.textLg
+								li There were no OS or PFS benefits in patients treated with Vectibix
+									sup &reg; 
+									| with 
+									em RAS
+									| -mutant mCRC
+									sup 1
+							p.reference.mb-0
+								span.pullSup *
+								| Updated information based on events in 82% of patients.
+								sup 1
+								br
+								sup.pullSup &dagger;
+								| Defined as wild type in both 
+								em KRAS 
+								| and 
+								em NRAS.
+								sup 1
+							p.reference.mb-0
+								| CI = confidence interval; HR = hazard ratio; mCRC = metastatic colorectal cancer; OS = overall survival; PFS = progression-free survival; WT = wild type.
+					section#safety.pt-5
+						.container
+							p.colorBrandBlue.mt-5
+								| In patients with WT 
+								em.pr-05 RAS
+								| * mCRC in the PRIME study
+								sup 1 
+							h2.colorBrandOrange.fontDefault.h1.mb-5
+								| Similar safety profile to patients with WT #[em.px-1 KRAS]#[sup &dagger;] mCRC#[sup 1,3]
+							.d-none.d-md-block
+								ul.tabs
+									li.tabs-item.is-active(data-tab='tab-1') Adverse reactions
+									li.tabs-item(data-tab='tab-2') Chemotherapy-associated adverse reactions
+								#tab-1.tabs-content.is-active
+									figure.mb-5
+										img(src='img/content-images/prime-safety-profile-table-lg.svg')
+									ul.mb-7
+										li
+											| Adverse reactions that did not meet the threshold criteria for inclusion in this table were flushing (3% vs < 1%), abdominal pain (28% vs 23%), localized infection (3.7% vs < 1%), cellulitis (2.5% vs 0%), hypocalcemia (5.6% vs 2.1%), and deep vein thrombosis (5.3% vs 3.1%)
+											sup 1
+								#tab-2.tabs-content
+									figure.mb-5
+										img(src='img/content-images/prime-safety-profile-table-2-lg.svg')
+
+							figure.mb-3.d-md-none
+								img(src='img/content-images/prime-safety-profile-table-sm.png')
+							p.reference.mb-0
+								span.pullSup *
+									| Defined as wild type in both 
+									em KRAS
+									|  and 
+									em NRAS
+									| .
+									sup 1
+									br
+									sup.pullSup &dagger;
+									| Exon 2 in codons 12 and 13.
+									sup 1
+									br
+									sup.pullSup &Dagger;
+									| Of the 656 patients in the PRIME patient population, 649 were evaluated for safety.
+									sup.pullSupp 1
+									br
+									| mCRC = metastatic colorectal cancer; PRIME = Panitumumab Randomized Trial in Combination With Chemotherapy for Metastatic Colorectal Cancer to Determine Efficacy; WT = wild type.
+				include includes/_notifyTray.pug
+				.container
+					.inlined.reference
+						h2.h6 References:
+						ol
+							li
+								|  Vectibix
+								sup &reg;
+								|  (panitumumab) prescribing information, Amgen; 6/2017. 
+							li
+								|  Douillard J-Y, Siena S, Cassidy J, et al. Randomized, phase III trial of panitumumab with infusional fluorouracil, leucovorin, and oxaliplatin (FOLFOX4) versus FOLFOX4 alone as first-line treatment in patients with previously untreated metastatic colorectal cancer: the PRIME study. 
+								em J Clin Oncol
+								| . 2010;28(31):4697-4705. 
+							li
+								|  Data on file, Amgen; 2013.
+				include includes/_footerMain.pug
+

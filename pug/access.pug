@@ -1,0 +1,76 @@
+doctype html
+html(lang="en")
+	head
+		- var page = { home: "", rasStory: "", firstLine: "", thirdLine: "", administration: "", patientProfiles: "", access: "is-current", generic: "", paidHome: "" };
+		include includes/_head.pug
+		title Access
+
+	body.amgenassist360
+		form
+			.pageWrap
+				include includes/_notifyMain.pug
+				include includes/_headerMain.pug
+				main
+					.hero(style='background-image:url(img/content-images/hero.png);')
+						.hero-inner
+							.hero-copy
+								span.hero-zone2 See how we can help your patients
+								span.hero-zone1
+									| Offering the tools, information, and support for Amgen products that
+									| 
+									| make a difference for you and your patients
+					.container
+						.htmlContent
+							.wrapper
+								p  
+								p  
+								.aa360.threeColumn
+									.flex
+										.third.first
+											h3.colorBrandBlue AMGEN REIMBURSEMENT SPECIALISTS
+											p
+												| Connect with an Amgen Reimbursement Counselor or schedule a visit with a Field Reimbursement Specialist
+										.third.second
+											div
+												h3.colorBrandBlue PATIENT RESOURCE
+													br 
+													| GUIDE
+												p
+													| Find co-pay and reimbursement resources* for patients with different kinds of insurance, or no insurance at all
+										.third.last
+											h3.colorBrandBlue BENEFIT VERIFICATION
+												br 
+												| &nbsp;
+											p
+												| Submit, store and retrieve benefit verifications for all your patients currently on an Amgen product
+							.aa360
+								.wrapper
+
+									p 
+										strong 
+											span.pullSup--lg *
+											| Provided through independent nonprofit patient assistance programs; program eligibility is based on the nonprofit’s criteria. Amgen has no control over these programs and provides referrals as a courtesy only.
+
+							.aa360.footer-box
+								.wrapper
+									a(target='_blank', href='http://www.amgenassist360.com')
+										img(src='img/content-images/a360_logo.png', style='width:100%;max-width: 336px; height: auto;', alt='Amgen Assist 360<sup>TM</sup>')
+									.contact-button-div
+										a(target='_blank', href='http://www.amgenassist360.com/hcp/vectibix-reimbursement-financial-assistance/')
+											.contact-button See how we can help
+										span.orange.call
+											| CALL 
+											span
+												strong
+													a(href='tel:+1-888-427-7478') 1-888-4ASSIST
+										span.nowrap
+											| (
+											a.darkGrey(href='tel:+1-888-427-7478') 1-888-427-7478
+											| )
+										br
+										span Monday to Friday 9:00 a.m. to 
+										|
+										span.nowrap 8:00 p.m. ET
+				include includes/_notifyTray.pug
+				include includes/_footerMain.pug
+

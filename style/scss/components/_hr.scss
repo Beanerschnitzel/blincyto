@@ -1,0 +1,29 @@
+.hr--fade {
+    border-color:transparent;
+    border-top-color:transparent;
+    position:relative;
+    color: #fff;
+    @extend .my-5;
+    &:after {
+        content:'';
+        position:absolute;
+        left:0;
+        right:0;
+        top:0;
+        height:1px;
+        background: linear-gradient(to left, transparent 20%, currentcolor 100%);
+    }
+}
+.hr--bold {
+    border-color:transparent;
+    position:relative;
+    &:after {
+        content:'';
+        position:absolute;
+        left:0;
+        right:0;
+        top:0;
+        height:5px;
+        background: linear-gradient(to left, #4bc1e1 0%, #166299 80%);
+    }
+}

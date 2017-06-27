@@ -1,0 +1,71 @@
+doctype html
+html(lang="en")
+	head
+		- var page = { home: "", rasStory: "", firstLine: "", thirdLine: "", administration: "", patientProfiles: "", access: "", generic: "", paidHome: "", siteMap: "" };
+		include includes/_head.pug
+		title [client name]
+
+	body
+		form
+			.pageWrap
+				include includes/_notifyMain.pug
+				include includes/_headerMain.pug
+				main
+					.container.pt-13
+						.row
+							.col-md-8
+								h3.h3.mb-5.colorBrandBlue Site Map
+								hr.hr--fade.colorBrandBlue
+								p.colorBrandBlue.my-5 
+									strong 
+										a(href="#safteyInformation").colorBrandBlue Important Safety Information
+								p.colorBrandBlue 
+									a(href="ras.html").colorBrandBlue 
+										em RAS 
+										| Story
+								ul.colorGrayDarker
+									li
+										a(href='genericTemplate.html').colorGrayDarker
+											em KRAS 
+											| and 
+											em NRAS
+									li
+										a(href='genericTemplate.html').colorGrayDarker
+											| WT 
+											em RAS 
+											| in PRIME
+								p.colorBrandBlue 
+									a(href="first-line-data.html").colorBrandBlue First-line data
+								ul.colorGrayDarker
+									li 
+										a(href='genericTemplate.html').colorGrayDarker PRIME study design
+									li 
+										a(href='genericTemplate.html').colorGrayDarker Progression-free survival
+									li 
+										a(href='genericTemplate.html').colorGrayDarker Objective response rate
+									li 
+										a(href='genericTemplate.html').colorGrayDarker Overall survival
+									li 
+										a(href='genericTemplate.html').colorGrayDarker Safety profile
+								p.colorBrandBlue 
+									a(href="third-line-data.html").colorBrandBlue Third-line data
+								ul.colorGrayDarker
+									li 
+										a(href='genericTemplate.html').colorGrayDarker 20100007 study
+									li 
+										a(href='genericTemplate.html').colorGrayDarker ASPECCT study
+								p.colorBrandBlue 
+									a(href="administration.html").colorBrandBlue Administration
+								p.colorBrandBlue 
+									a(href="patient-profiles.html").colorBrandBlue Patient Profiles
+								ul.colorGrayDarker
+									li 
+										a(href='genericTemplate.html').colorGrayDarker First-line: Roy
+									li 
+										a(href='genericTemplate.html').colorGrayDarker First-line: Brian
+									li 
+										a(href='genericTemplate.html').colorGrayDarker Third-line: Connie
+								p.colorBrandBlue.mb-0
+									a(href="access.html").colorBrandBlue Access
+				include includes/_notifyTray.pug
+				include includes/_footerMain.pug

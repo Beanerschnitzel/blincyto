@@ -1,0 +1,87 @@
+doctype html
+html(lang="en")
+	head
+		- var page = { home: "is-current", rasStory: "", firstLine: "", thirdLine: "", administration: "", patientProfiles: "", access: "", generic: "", paidHome: "" };
+		include includes/_head.pug
+		title [client name]
+
+	body.home
+		form
+			.pageWrap
+				include includes/_notifyMain.pug
+				include includes/_headerMain.pug
+				main
+					.heroMain(data-lg='img/content-images/hero-main-tall.png', data-sm='img/content-images/hero-main-tall.png')
+						.heroMain-inner
+							.heroMain-copy
+								span.heroMain-zone1 VECTIBIX#[sup &reg;] (panitumumab)
+								span.heroMain-zone3 LEAPS AHEAD
+								span.heroMain-zone4 in patients with WT #[em RAS]#[span.ml-1 *] mCRC
+						section.sideBySide
+							.sideBySide-inner
+								.sideBySide-img.pullLeft
+									img(src='img/content-images/first-line-circle.png')
+								.sideBySide-copy.ml-13
+									h2.sideBySide-heading.colorBrandOrange 5.6-month increase in median OS<sup>†</sup>
+									h2.sideBySide-subHeading.colorWhite with Vectibix® + FOLFOX vs FOLFOX alone
+										sup 1
+									p.colorWhite 
+										| PRIME (Vectibix
+										sup &reg; 
+										| + FOLFOX vs FOLFOX alone): N = 1,183, randomized (1:1), phase 3, open-label, multicenter study of mCRC. In this post-hoc analysis, patients with WT #[em RAS] mCRC (n = 512) were evaluated.#[sup 1,2]
+										ul.colorWhite.mb-0
+											li 
+												| Median OS (WT #[em RAS] mCRC): 25.8 vs 20.2 months; HR = 0.77 (95% CI: 0.64–0.94)
+												sup 1
+								.sideBySide-cta.ml-13.pb-1.pt-1
+									a(href='').btn.btn-primary Explore first-line data in WT
+										em RAS 
+										| mCRC
+					section.sideBySide.sideBySide--imgRight
+						.sideBySide-inner
+							.sideBySide-img.pullRight
+								img(src='img/content-images/spot-the-difference-circle.png')
+							.sideBySide-copy
+								h2.sideBySide-heading.colorBrandBlue The importance of biomarker identification: See why testing for WT #[em RAS] is recommended#[sup 1]
+							.sideBySide-cta.pb-1.pt-1
+								a(href='').btn.btn-secondary Learn more about WT 
+									em RAS
+					section.sideBySide.sideBySide--fillGradiantBlue
+						.sideBySide-inner
+							.sideBySide-img.pullLeft
+								img(src='img/content-images/know-your-patients-circle.png')
+							.sideBySide-copy
+								h2.sideBySide-heading.colorWhite Know your patients:
+								h2.sideBySide-subHeading.colorWhite Identification of patients with WT #[em RAS] mCRC can help determine appropriate treatment options#[sup 1]
+							.sideBySide-cta.pb-1.pt-1
+								a(href='').btn.btn-primary Examine hypothetical patient profiles
+					section.sideBySide.sideBySide--imgRight
+						.sideBySide-inner
+							.sideBySide-img.pullRight
+								img(src='img/content-images/third-line-circle.png').pt-6
+							.sideBySide-copy
+								h2.sideBySide-heading.colorBrandBlue Proven in third line:  
+								h2.sideBySide-subHeading.colorBrandBlue Demonstrated efficacy in patients with chemorefractory WT #[em RAS] mCRC#[sup 1]
+							.sideBySide-cta.pb-1.pt-1
+								a(href='').btn.btn-secondary Review the results of Study 20100007
+					.container
+						p.reference
+							span.pullSup *
+								| Defined as wild type in both #[em KRAS] and #[em NRAS].#[sup 1]
+								br
+								sup.pullSup &dagger;
+								| OS with updated information based on events in 82% of patients.
+								sup 1
+								br
+								| CI = confidence interval; HR = hazard ratio; mCRC = metastatic colorectal cancer; OS = overall survival; PRIME = Panitumumab Randomized Trial in Combination With Chemotherapy for Metastatic Colorectal Cancer to Determine Efficacy; WT = wild type.
+				include includes/_notifyTray.pug
+				.container
+					.inlined.reference
+						h2.h6 References:
+						ol
+							li
+								|  Vectibix#[sup &reg;] (panitumumab) prescribing information, Amgen; 6/2017.
+							li
+								|  Douillard J-Y, Siena S, Cassidy J, et al. Randomized, phase III trial of panitumumab with infusional fluorouracil, leucovorin, and oxaliplatin (FOLFOX4) versus FOLFOX4 alone as first-line treatment in patients with previously untreated metastatic colorectal cancer: the PRIME study. #[em J Clin Oncol]. 2010;28(31):4697-4705.
+				include includes/_footerMain.pug
+

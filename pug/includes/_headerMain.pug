@@ -1,0 +1,110 @@
+if page === undefined
+	- page = { home: "", rasStory: "", firstLine: "", thirdLine: "", administration: "", patientProfiles: "", access: "", generic: "", paidHome: "" };
+#pageTop
+header.headerMain
+	.headerMain-util
+		.headerMain-utilInner
+			ul.headerMain-navUtil
+				li.headerMain-navUtilItem
+					a(href='#safteyInformation').headerMain-navUtilLink Important Safety Information
+				li.headerMain-navUtilItem
+					a(href='').headerMain-navUtilLink.openNotifyMain Full Prescribing Information
+				li.headerMain-navUtilItem
+					a(href='#').headerMain-navUtilLink Medication Guide
+				li.headerMain-navUtilItem
+					a(href='#').headerMain-navUtilLink Indication
+				li.headerMain-navUtilItem
+					a(href='#').headerMain-navUtilLink BLYINCYTO
+						sup &reg;
+						| REMS
+			//- .headerMain-utilCollateral
+			//- 	a(href='genericTemplate.html').headerMain-ctaBtn Visit Patient Site
+			//- 	.headerMain-search
+			//- 		label(for='headerMainSearch')
+			//- 		input(type='text',placeholder='Search',id='headerMainSearch').headerMain-searchBox
+			//- 		span.headerMain-searchToggle
+			ul.headerMain-navUtilMobile
+				li.headerMain-navUtilMobileItem
+					a(href='genericTemplate.html').headerMain-navUtilMobileLink Prescribing Info
+				li.headerMain-navUtilMobileItem
+					a(href='genericTemplate.html').headerMain-navUtilMobileLink Indication
+	.headerMain-main
+		.headerMain-mainInner
+			.headerMain-logo
+				a(href='home.html').headerMain-logoLink
+					img(src='img/content-images/logo-main.png').headerMain-logoImg
+			//- ul.headerMain-navMain
+			//- 	li(class=page.rasStory + ' headerMain-navMainItem')
+			//- 		a(href='ras.html').headerMain-navMainLink.hasChildren 
+			//- 			em.px-1 RAS 
+			//- 			| Story
+			//- 		.headerMain-subContent
+			//- 			.headerMain-subContentInner
+			//- 				ul.headerMain-subNav
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='ras.html#krasNras').headerMain-subMainLink 
+			//- 							em.pr-1 KRAS 
+			//- 							| and
+			//- 							em.px-1 NRAS 
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='ras.html#wtRas').headerMain-subMainLink
+			//- 							| WT
+			//- 							em.px-1 RAS 
+			//- 							| in PRIME
+			//- 				.headerMain-subcollateral
+			//- 					a(href='ras.html').headerMain-subcollateralCta 
+			//- 						| See efficacy in WT 
+			//- 						em.pr-2 RAS
+			//- 						| mCRC patients from PRIME
+			//- 	li(class=page.firstLine + ' headerMain-navMainItem')
+			//- 		a(href='first-line-data.html').headerMain-navMainLink.hasChildren First-line data
+			//- 		.headerMain-subContent
+			//- 			.headerMain-subContentInner
+			//- 				ul.headerMain-subNav
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='first-line-data.html#prime').headerMain-subMainLink PRIME study design
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='first-line-data.html#progression').headerMain-subMainLink Progression-free survival
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='first-line-data.html#responseRate').headerMain-subMainLink Objective response rate
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='first-line-data.html#survival').headerMain-subMainLink Overall survival
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='first-line-data.html#safety').headerMain-subMainLink Safety profile
+			//- 				.headerMain-subcollateral
+			//- 					a(href='first-line-data.html').headerMain-subcollateralCta Review a first-line patient profile
+			//- 	li(class=page.thirdLine + ' headerMain-navMainItem')
+			//- 		a(href='third-line-data.html').headerMain-navMainLink.hasChildren Third-line data
+			//- 		.headerMain-subContent
+			//- 			.headerMain-subContentInner
+			//- 				ul.headerMain-subNav
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='third-line-data.html#20100007').headerMain-subMainLink 20100007 study
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='third-line-data.html#ASPECCT').headerMain-subMainLink ASPECCT study
+			//- 				.headerMain-subcollateral
+			//- 					a(href='third-line-data.html').headerMain-subcollateralCta Review a third-line patient profile
+			//- 	li(class=page.administration + ' headerMain-navMainItem')
+			//- 		a(href='administration.html').headerMain-navMainLink Administration
+			//- 	li(class=page.patientProfiles + ' headerMain-navMainItem')
+			//- 		a(href='patient-profiles.html').headerMain-navMainLink.hasChildren Patient Profiles
+			//- 		.headerMain-subContent
+			//- 			.headerMain-subContentInner
+			//- 				ul.headerMain-subNav
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='patient-profiles.html#roy').headerMain-subMainLink First-line: Roy
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='patient-profiles.html#brian').headerMain-subMainLink First-line: Brian
+			//- 					li.headerMain-subNavItem
+			//- 						a(href='patient-profiles.html#connie').headerMain-subMainLink Third-line: Connie
+			//- 				.headerMain-subcollateral
+			//- 					a(href='patient-profiles.html').headerMain-subcollateralCta Learn how WT 
+			//- 						em.pr-2 RAS
+			//- 						| mCRC patients were identified in PRIME
+			//- 	li(class=page.access + ' headerMain-navMainItem')
+			//- 		a(href='access.html').headerMain-navMainLink Access
+			//- .headerMain-navMainToggle
+			//- 	.headerMain-navMainToggleLine
+			//- 	.headerMain-navMainToggleLine
+			//- 	.headerMain-navMainToggleLine
+

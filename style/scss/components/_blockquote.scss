@@ -1,0 +1,36 @@
+blockquote {
+   position: relative;
+   z-index: 1;
+
+   padding: $spacer $spacer $spacer $spacer*2;
+
+   font-family: 'GothamCondensed';
+   font-size: 28px;
+   line-height: 1.2;
+   background-image: url('../../img/content-images/blockquote.svg');
+   background-size: 20px 100%;
+   background-repeat: no-repeat;
+
+   &:after {
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      content: '';
+
+      opacity: .2;
+      background: currentcolor;
+   }
+   cite {
+      font-size: 23px;
+      font-style: normal;
+      //display:inline-block;
+      &:before {
+         content: '-' '\00a0';
+         margin-right: -2px;
+      }
+   }
+}

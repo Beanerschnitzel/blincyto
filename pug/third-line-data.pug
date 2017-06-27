@@ -1,0 +1,276 @@
+doctype html
+html(lang="en")
+	head
+		- var page = { home: "", rasStory: "", firstLine: "", thirdLine: "is-current", administration: "", patientProfiles: "", access: "", generic: "", paidHome: "" };
+		include includes/_head.pug
+		title Third Line Data
+
+	body
+		form
+			.pageWrap
+				include includes/_notifyMain.pug
+				include includes/_headerMain.pug
+				main
+					.hero(style="background-image:url(img/content-images/hero.png)")
+						.hero-inner
+							.hero-copy
+								span.hero-zone1 In patients with chemorefractory WT#[em.px-1 KRAS]#[span *] mCRC#[sup 1]
+								span.hero-zone2
+									| The third-line 20100007 study evaluated WT 
+									em RAS
+									sup.ml-2 &dagger; 
+									| mCRC prospectively
+									sup 1
+
+					section#20100007.py-12
+						.container
+							h1.colorBrandBlue.mb-5
+								| A phase 3, open-label, multicenter, randomized (1:1) study of 377 patients with chemorefractory WT 
+								em KRAS
+								|  mCRC treated with Vectibix
+								sup &reg;
+								|  Q2W + BSC or BSC alone
+								sup 1,2
+							figure.mb-5
+								img(src='img/content-images/third-line-chart-1-sm.svg').d-md-none
+								img(src='img/content-images/third-line-chart-1-lg.svg').d-none.d-md-block
+							ul.colorGrayDarker
+								li
+									| The primary endpoint was conducted in WT 
+									em KRAS 
+									| (exon 2 in codons 12 and 13). In a prespecified secondary endpoint analysis in the WT #[em RAS] subgroup, 
+									em RAS 
+									| tumor mutation status was available for 86% of patients: 54 (14%) had mutant 
+									em RAS 
+									| tumors and 54 (14%) had unknown 
+									em RAS 
+									| tumor status
+									sup 1
+
+								li
+									| Prespecified secondary endpoints#[sup 1]:
+									ul.list-unstyled
+										li
+											| – OS, PFS, and ORR
+											sup §
+											|  in patients with WT 
+											em RAS
+											|  mCRC
+								li
+									| Patient characteristics:#[sup 1,2]
+									ul.list-unstyled
+										li &ndash; ECOG PS 0-2
+										li &ndash; Aged &ge; 18 years
+										li &ndash; Median age was 61 years
+							p.reference.mb-0
+								span.pullSup *
+								| Exon 2 in codons 12 and 13.
+								sup 1
+								br
+								sup.pullSup &dagger;
+								| Defined as wild type in both #[em KRAS] and #[em NRAS].#[sup 1]
+								br
+								sup.pullSup &Dagger;
+								em RAS
+								|  mutation status was determined for 324 patients using Sanger bidirectional sequencing.
+								sup 2
+								br
+								sup.pullSup §
+								| Response was evaluated by investigators per RECIST version 1.1.
+								sup 2
+								br
+								| BSC = best supportive care; ECOG PS = Eastern Cooperative Oncology Group Performance Status; mCRC = metastatic colorectal cancer; ORR = objective response rate; OS = overall survival; PFS = progression-free survival; Q2W = every 2 weeks; RECIST = Response Evaluation Criteria in Solid Tumors; WT = wild type.
+					section.py-12.fillGradientBlue
+						.container
+							p.colorBrandOrangeLight
+								| Significant improvement in OS in patients with WT 
+								em.pr-05 RAS
+								| * mCRC
+								sup 1
+							h2.fontDefault.h1
+								| 44.9% increase (3.1-month absolute difference) in median OS with Vectibix
+								sup &reg;
+								|  + BSC vs BSC alone
+								sup 1
+							hr.hr--fade
+							h3.h2.my-5
+								| Efficacy results from the third-line 20100007 study
+								sup 1
+							figure.mb-5.pullLeft
+								img(src='img/content-images/third-line-combo-1-sm.png').d-md-none
+								img(src='img/content-images/third-line-combo-1-lg.png' style='max-width:802px').d-none.d-md-block
+							p.reference.mb-0
+								span.pullSup *
+									|Defined as wild type in both 
+									em KRAS
+									|  and 
+									em NRAS
+									|.
+									sup 1
+									br
+									sup.pullSup &dagger;
+									| Response was evaluated by investigators per RECIST version 1.1.
+									sup 2
+									br
+									| BSC = best supportive care; CI = confidence interval; HR = hazard ratio; mCRC = metastatic colorectal cancer; ORR = objective response rate; OS = overall survival; PFS = progression-free survival; RECIST = Response Evaluation Criteria in Solid Tumors; WT = wild type.
+					section#ASPECCT.py-12
+						.container
+							p.colorBrandBlue
+								| In patients with chemorefractory WT 
+								em.pr-05 KRAS
+								| * mCRC
+
+							h2.colorBrandOrange.fontDefault.h1
+								| The third-line ASPECCT study
+								sup 1,3
+							hr.hr--fade.colorBrandBlue
+							h3.h2.my-5.colorBrandBlue
+								| A phase 3, randomized (1:1), open-label, non-inferiority study of 1,010 patients with chemorefractory WT 
+								em KRAS
+								|  mCRC treated with Vectibix
+								sup &reg;
+								|  (n = 499) or cetuximab (n = 500)
+								sup 1,3
+							ul.colorGrayDarker.mb-13
+								li
+									| Primary endpoint was OS assessed for non-inferiority
+									sup 1
+								li
+									| Key secondary endpoints were PFS, ORR,
+									sup &dagger;
+									|  and safety
+									sup 3
+							h3.h2.mb-5.colorBrandBlue
+								| Treatment methods
+								sup 1,3
+
+							figure.mb-5
+								img(src='img/content-images/third-line-table-1-sm.svg').d-md-none
+								img(src='img/content-images/third-line-table-1-lg.svg').d-none.d-md-block
+							p.reference
+								sup.pullSup &Dagger;
+								| No standardized premedication was required in clinical trials. The utility of premedication in preventing infusion toxicity is unknown.
+								sup 1
+							p.reference
+								span.pullSup *
+									| Exon 2 in codons 12 or 13.
+									sup 1
+									br
+									sup.pullSup &dagger;
+									| Objective tumor response was evaluated by the investigator at each site using RECIST v1.1 criteria.
+									sup 3
+									br
+									| ASPECCT = A Study of Panitumumab Efficacy and Safety Compared to Cetuximab; mCRC = metastatic colorectal cancer; ORR = objective response rate; OS = overall survival; PFS = progression-free survival; QW = weekly; Q2W = every 2 weeks; RECIST = Response Evaluation Criteria in Solid Tumors; WT = wild type.
+
+					section.py-12.fillGradientBlue
+						.container
+							p.colorBrandOrangeLight
+								| In third-line patients with chemorefractory WT 
+								em.pr-05 KRAS
+								| * mCRC
+								sup 1
+
+							h2.fontDefault.h1
+								| Vectibix
+								sup &reg;
+								|  demonstrated statistically significant non-inferiority
+								sup &dagger;
+								|  for OS to cetuximab
+								sup 1
+							hr.hr--fade
+							h3.h2.my-5
+								| Overall survival (OS)
+								sup 1
+							ul.mb-7
+								li
+									| Statistically significant non-inferiority: median OS of 10.4 months with Vectibix
+									sup &reg;
+									|     to 10.0 months with cetuximab (HR = 0.97, 95% CI: 0.84–1.11)
+									sup 1
+
+							figure.mb-5.fillColorWhite.shadow
+								img(src='img/content-images/third-line-chart-2-sm.svg').d-md-none
+								img(src='img/content-images/third-line-chart-2-lg.svg' style='max-width: 90%; margin: 0 auto;padding: 5% 0;').d-none.d-md-block
+
+							h3.h2.my-5
+								| Key secondary endpoints#[sup 1,3]
+							ul.mb-5
+								li
+									| Median PFS: 4.1 months (95% CI: 3.2–4.8) with Vectibix#[sup &reg;] and 4.4 months (95% CI: 3.2–4.8) with cetuximab (HR = 1.00, 95% CI: 0.88–1.14)#[sup 1]
+								li
+									| ORR#[sup &Dagger;] : 22% (95% CI: 18%–26%) with Vectibix#[sup &reg;] and 19% (95% CI: 16%–23%) with cetuximab#[sup 1]
+							table(width='100%').table--fiesta.mb-13
+								thead
+									tr
+										th Incidence of select adverse reactions (all grades)
+											sup 3	
+										th Vectibix
+											sup &reg;
+											br
+											span (n = 496)
+										th CetuxImab
+											br
+											span (n = 503)
+								tbody
+									tr
+										th All adverse reactions 
+										td 98%
+										td 98% 
+									tr
+										th Infusion reactions
+										td 3%
+										td 14%
+									tr
+										th Skin and subcutaneous tissue toxicity 
+										td 87%
+										td 87%
+									tr
+										th Hypomagnesemia
+										td 27%
+										td 18%
+
+							p 
+								| A 
+								em RAS 
+								| subset analysis was not performed in this study. Retrospective subset analyses across several other randomized clinical trials reported that patients with #[em RAS]-mutant mCRC treated with Vectibix#[sup &reg;] experienced increased tumor progression, increased mortality, or lack of benefit.#[sup 1]
+							p.reference.mb-0
+								span.pullSup *
+									| Exon 2 in codons 12 and 13.
+									sup 1
+									br
+									sup.pullSup &dagger;
+									| The criterion for non-inferiority was for Vectibix
+									sup &reg;
+									|  to retain at least 50% of the OS benefit of cetuximab based on an OS hazard ratio of 0.55 from the NCIC-CTG CO.17 study relative to BSC.
+									sup 1
+									br
+									sup.pullSup &Dagger;
+									| Objective tumor response was evaluated by the investigator at each site using RECIST v1.1 criteria.
+									sup 3
+									br
+									| BSC = best supportive care; CI = confidence interval; HR = hazard ratio; mCRC = metastatic colorectal cancer; NCIC-CTG = National Cancer Institute of Canada-Clinical Trials Group; ORR = objective response rate; OS = overall survival; PFS = progression-free survival; RECIST = Response Evaluation Criteria in Solid Tumors; WT = wild type.
+				include includes/_notifyTray.pug
+				.container
+					.inlined.reference
+						h2.h5 References:
+						ol
+							li
+								|  Vectibix
+								sup &reg;
+								|  (panitumumab) prescribing information, Amgen; 6/2017. 
+							li
+								|  Kim TW, Elme A, Kusic Z, et al. A phase 3 trial evaluating panitumumab plus best supportive care vs best supportive care in chemorefractory wild-type 
+								em KRAS
+								|  or 
+								em RAS
+								|  metastatic colorectal cancer. 
+								em Br J Cancer.
+								|  2016;115:1206-1214. doi:10.1038/bjc.2016.309.
+							li
+								|  Price TJ, Peeters M, Kim TW, et al. Panitumumab versus cetuximab in patients with chemotherapy-refractory wild-type 
+								em KRAS
+								|  exon 2 metastatic colorectal cancer (ASPECCT): a randomised, multicentre, open-label, non-inferiority phase 3 study. 
+								em Lancet Oncol.
+								|  2014;15(6):569-579.
+				include includes/_footerMain.pug
+

@@ -1,0 +1,115 @@
+.sideBySide {
+   &.sideBySide--fillGradiantBlue {
+      color: $colorWhite;
+      background: linear-gradient(25deg, #166299 0%, #166299 20%, #4bc1e1 44%, #4bc1e1 100%);
+   }
+}
+
+.sideBySide-inner {
+   display: flex;
+
+   flex-wrap: wrap;
+
+   max-width: $maxWidth;
+   margin-right: auto;
+   margin-left: auto;
+   padding: $spacer 15px;
+   @include media-breakpoint-up(lg) {
+      flex-direction: column;
+      justify-content: center;
+
+      height: 310px;
+   }
+}
+
+.sideBySide-img {
+   flex: 0 0 50%;
+
+   max-width: 50%;
+   img {
+      display: inline-block;
+
+      max-width: 100%;
+      height: auto;
+   }
+   @include media-breakpoint-up(lg) {
+      flex: 0 1 100%;
+
+      max-width: none;
+      .sideBySide--imgRight & {
+         order: 1;
+
+         text-align: right;
+      }
+   }
+}
+
+.sideBySide-copy {
+   display: flex;
+
+   flex: 0 0 50%;
+   flex-direction: column;
+   justify-content: center;
+
+   max-width: 50%;
+   @include media-breakpoint-up(lg) {
+      flex: 0 1 auto;
+
+      max-width: 550px;
+      margin-left: auto;
+      .sideBySide--imgRight & {
+         margin-right: auto;
+         margin-left: 0;
+      }
+   }
+}
+
+.sideBySide-heading {
+   @include responsive-font(5vw, 35px, 48px, 48px);
+}
+
+.sideBySide-subHeading {
+   @include responsive-font(5vw, 23px, 36px, 36px);
+}
+
+.sideBySide-cta {
+   flex: 0 0 100%;
+
+   max-width: 100%;
+   .btn {
+      display: block;
+      @include media-breakpoint-up(lg) {
+         display: inline-block;
+      }
+   }
+   @include media-breakpoint-up(lg) {
+      flex: 0 1 auto;
+
+      width: 550px;
+      margin-left: auto;
+      .sideBySide--imgRight & {
+         margin-right: auto;
+         margin-left: 0;
+      }
+   }
+}
+
+
+.home .heroMain {
+   // .sideBySide:first-of-type {
+   //    height: 500px;
+   //    margin-top: -500px;
+   //    .sideBySide-inner {
+   //       height: 500px;
+   //    }
+   // }
+   @include media-breakpoint-up(lg) {
+      .sideBySide:first-of-type {
+         height: 400px;
+         
+         .sideBySide-inner {
+            height: 400px;
+         }
+      }
+   }
+}

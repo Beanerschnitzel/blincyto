@@ -1,0 +1,46 @@
+.pointCallout {
+  font-family:$headings-font-family;
+  position: relative;
+  z-index:1;
+  overflow:hidden;
+  text-align:center;
+  //padding:$spacer/2 $spacer $spacer;
+  font-size:24px;
+  line-height:1.2;
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   background-color: palette(colorBrandOrange,base);
+  //   padding-bottom: 71%;
+  //   width: 71%;
+  //   z-index: -1;
+  //   transform-origin: 0 0;
+  //   transform: rotate(-45deg);
+  // }
+  &:after {
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:currentcolor;
+    opacity:.2;
+
+  }
+}
+.pointCallout-heading {
+  font-size:45px;
+  margin-bottom:$spacer*3;
+  line-height:.9;
+  background-color:green;
+  padding:$spacer/2 $spacer $spacer*3 $spacer;
+  background:url(../../img/content-images/orange-down-triangle.png) no-repeat top center;
+  background-size:100%;
+  height:113px;
+}
+.pointCallout-headingSm {
+  font-size:22px;
+}

@@ -1,0 +1,122 @@
+doctype html
+html(lang="en")
+	head
+		- var page = { home: "", rasStory: "is-current", firstLine: "", thirdLine: "", administration: "", patientProfiles: "", access: "", generic: "", paidHome: "" };
+		include includes/_head.pug
+		title RAS Story
+
+	body
+		form
+			.pageWrap
+				include includes/_notifyMain.pug
+				include includes/_headerMain.pug
+				main
+					.hero(style="background-image:url(img/content-images/hero.png)")
+						.hero-inner
+							.hero-copy
+								span.hero-zone1 In the first-line treatment of mCRC
+									sup 1 
+								span.hero-zone2.mb-0 Biomarker identification can provide critical information
+									sup 2
+					section#krasNras.py-12
+						.container
+							h2.colorBrandBlue
+								|
+								em KRAS 
+								|  and 
+								em NRAS
+								|  are part of the 
+								em RAS 
+								| family of oncogenes
+								sup 1 
+							.row
+								.col-md-5.colorGrayDarker.pt-md-10
+									p
+										em RAS
+										|  status definitions
+										sup 2
+										|:
+									ul.list--spaced
+										li 
+											strong #[em RAS] mutation negative
+											|, or wild type (WT), means the #[em RAS] genes (#[em KRAS] and #[em NRAS]) do not have mutations
+										li 
+											strong #[em RAS] mutation negative
+											|, or mutant type (MT), means that at least one of the #[em RAS] genes (#[em KRAS] or #[em NRAS]) contains a mutation that affects its function
+								.col-md-7
+									figure
+										img(src='img/content-images/kras-exor-2-analysis-sm.svg').d-md-none
+										img(src='img/content-images/kras-exor-2-analysis-lg.svg').d-none.d-md-block.mt-10
+							p.reference mCRC = metastatic colorectal cancer; MT = mutant type; WT = wild type.
+					section#wtRas.py-12.fillGradientBlue
+						.container
+							.row
+								.col-md-9
+									p.colorBrandOrangeLight.textLg
+										| Don't let patients with WT 
+										em RAS
+										span.pl-1 *
+										|  mCRC miss a chance for personalized treatment
+										sup 1 
+									h2.fontDefault.h1
+										| The importance of biomarker identification
+									hr.hr--fade
+									h3.h2.py-3
+										|Identification of patients with WT 
+										em.px-1 RAS 
+										| mCRC can help determine appropriate treatment options
+										sup 1
+									figure.mb-5
+										img(src='img/content-images/prime-population-sm.svg').shadow.d-md-none
+										img(src='img/content-images/prime-population-lg.svg').shadow.d-none.d-md-block
+							h3.h2.mb-5
+								| Patients with MT 
+								em RAS 
+								|  tumors should not be treated with Vectibix
+								sup &reg;1
+
+							p Referenced with permission from the NCCN Clinical Practice Guidelines in Oncology (NCCN Guidelines#[sup &reg;]) for Colon Cancer V2.2017. &copy; National Comprehensive Cancer Network, Inc 2017. All rights reserved. Accessed May 11, 2017. To view the most recent and complete version of the guideline, go online to #[a(href='https://www.nccn.org/') NCCN.org]. The National Comprehensive Cancer Network makes no warranties of any kind whatsoever regarding their content, use or application and disclaims any responsibility for their application or use in any way. 
+
+
+							blockquote.my-5
+								.tr
+								| "All patients with metastatic colorectal cancer should have tumor tissue genotyped for 
+								em RAS 
+								|(
+								em KRAS
+								|  and 
+								em NRAS
+								|) mutations" &mdash;NCCN Clinical Practice Guidelines in Oncology (NCCN Guidelines
+								sup &reg;
+								| ) for Colon Cancer
+								sup 3
+							p.reference
+								span.pullSup *
+									| Defined as wild type in both 
+									em KRAS 
+									| and 
+									em NRAS.
+									sup 1
+									br
+									| mCRC = metastatic colorectal cancer; MT = mutant type; NCCN = National Comprehensive Cancer Network; WT = wild type.
+				include includes/_notifyTray.pug
+				.container
+					.inlined.reference
+						h2.h5 References:
+						ol
+							li
+								|  Vectibix
+								sup &reg;
+								|  (panitumumab) prescribing information, Amgen; 6/2017. 
+							li
+								|  Douillard J-Y, Oliner KS, Siena S, et al. Panitumumab–FOLFOX4 treatment and 
+								em RAS
+								|  mutations in colorectal cancer. 
+								em N Engl J Med.
+								|  2013;369(11):1023-1034. 
+							li
+								|  Referenced with permission from the NCCN Clinical Practice Guidelines in Oncology (NCCN Guidelines
+								sup &reg;
+								| ) for Colon Cancer V2.2017. &copy;National Comprehensive Cancer Network, Inc 2017. All rights reserved. Accessed April 21, 2017. To view the most recent and complete version of the guideline, go online to NCCN.org. The National Comprehensive Cancer Network makes no warranties of any kind whatsoever regarding their content, use or application and disclaims any responsibility for their application or use in any way.
+				include includes/_footerMain.pug
+

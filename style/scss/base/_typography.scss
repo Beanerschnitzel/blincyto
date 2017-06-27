@@ -1,0 +1,20 @@
+/**
+ * Basic typography style for copy text
+ */
+
+
+sup {
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	top: -.45em;
+	font-size: 70%;
+}
+
+h1 sup {
+	font-size: 50%;
+	vertical-align: 10px;
+}
+
+h2 sup {
+	font-size: 50%;
+	vertical-align: 10px;
+}

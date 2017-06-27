@@ -1,0 +1,94 @@
+.hero {
+   @include media-breakpoint-down(md) {
+      &:not(.profiles) {
+         background: linear-gradient(45deg, #4bc1e1 0%, #166299 80%) !important;
+      }
+   }
+   display: flex;
+
+   justify-content: center;
+
+   color: $colorWhite;
+   @include media-breakpoint-up(lg) {
+      justify-content: center;
+
+      min-height: 300px;
+      margin-top: -100px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-position: 48% center;
+      background-size: cover;
+   }
+}
+
+.hero-inner {
+   display: flex;
+
+   width: 100%;
+   max-width: $maxWidth;
+   padding-right: $spacer*2;
+   padding-left: $spacer*2;
+   @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+
+      padding-right: 15px;
+      padding-left: 15px;
+   }
+}
+
+.hero-copy {
+   position: relative;
+
+   display: flex;
+
+   flex-direction: column;
+
+   padding-top: $spacer*3;
+   padding-bottom: $spacer*3;
+
+   text-shadow: 0 0 30px rgba(palette(colorBrandBlueDark, base), .75);
+   sup {
+      position: static;
+
+      vertical-align: 7px;
+   }
+   @include media-breakpoint-up(lg) {
+      width: 78%;
+      padding-top: 94px;
+      padding-bottom: 0;
+      justify-content: center;
+   }
+}
+
+.hero-zone1 {
+   display: block;
+
+   margin-bottom: $spacer;
+   padding-right: $spacer/2;
+
+   font-size: 18px;
+   @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+   }
+}
+
+.hero-zone2 {
+   margin-bottom: $spacer;
+
+   font-size: 40px;
+   font-weight: bold;
+   line-height: 1.2;
+   sup {
+      vertical-align: 17px;
+      font-size: 50%;
+   }
+   @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+   }
+}
+.hero-zone3 {
+   @include media-breakpoint-up(lg) {
+      margin-top: $spacer;;
+   }
+}

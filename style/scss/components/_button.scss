@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn-primary, .btn-secondary {
+    padding: $spacer $spacer*3 $spacer $spacer*2;
+    position:relative;
+    z-index:1;
+    overflow:hidden;
+    //padding-right:24px;
+    text-decoration:none;
+    font-size:24px;
+    white-space:normal;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+    }
+    &:before {
+        height: 50%;
+        width: 100%;
+        right: 0;
+        transform: skew(36deg);
+        transform-origin:right bottom;
+        top: 0;
+
+    }
+    &:after {
+        height: 50%;
+        width: 100%;
+        right: 0;
+        top: calc(50% - 1px);
+        transform: skew(-36deg);
+        transform-origin:right top;
+    }
+    &:hover {
+        text-decoration:none;
+        color:$colorWhite;
+    }
+
+}
+.btn-primary {
+    &:before,
+    &:after {
+        background: linear-gradient(to right, #f6cf3f 0%, #f6a800 100%);
+    }
+}
+.btn-secondary {
+    &:before,
+    &:after {
+        background: linear-gradient(to right, #00a6d9 0%, #166299 100%);
+    }
+}

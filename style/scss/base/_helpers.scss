@@ -1,0 +1,141 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+.noScroll {
+  height: 100%;
+  overflow: hidden;
+}
+//loop through each color in the $palettes map in style/scss/_variables.scss and add the modifiers
+@each $palette in $palettes {
+    //Grab/Define the main colors e.g. "colorBrandBlue"
+    $baseColorName: nth($palette, 1);
+    //Grab/Define the modifiers, e.g. "lighter"
+    $modifiers: nth($palette, 2);
+//Generate helper classes
+@each $name, $value in $modifiers {
+  //when we find the name "base" we want to remove it from the helper classes
+  // i.e. good = ".colorBrandBlue", bad = ".colorBrandBlueBase"
+    @if $name == base {$name : '';}
+    //Generate text color classes
+    .#{$baseColorName}#{capitalize($name)} {
+      color: $value !important;
+    }
+    //Generate text color classes
+    .fill#{capitalize($baseColorName)}#{capitalize($name)} {
+      background-color: $value !important;
+      &, a:not(.btn), a:not(.btn):hover {
+          color: color-contrast($value);
+      }
+    }
+  }
+}
+.fillColorWhite {
+    background-color: $colorWhite !important;
+    &, a:not(.btn), a:not(.btn):hover {
+        color: color-contrast($colorWhite);
+    }
+}
+.fillColorBlack {
+    background-color: $colorBlack !important;
+    &, a:not(.btn), a:not(.btn):hover {
+        color: color-contrast($colorBlack);
+    }
+}
+//special fills
+.fillGradientBlue {
+  background: linear-gradient(45deg, #00d4ec 0%, #0282b1 80%) !important;
+  &, a:not(.btn), a:not(.btn):hover {
+      color: $colorWhite;
+  }
+}
+.shadow {
+  box-shadow: 0 20px 20px 0 rgba(palette(colorBrandBlue,dark), .25);
+}
+.pullFirstChar {
+  &::first-letter,sup:first-child {
+    margin-left:-.5em;
+  }
+}
+.fontDefault {
+  font-family:$font-family-base;
+}
+.fontHeadings {
+  font-family:$font-family-base;
+}
+.fontBlack {
+  font-family:'GothamCondensed';
+}
+.inlined {
+  * {
+      display:inline;
+      padding:0;
+      margin-bottom:0;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      color:palette(colorGray,darker);
+    }
+    ol {
+      li {
+        counter-increment: step-counter;
+        &:before {
+            content: counter(step-counter) '.';
+            font-weight: bold;
+            color:palette(colorGray,darker);
+        }
+      }
+    }
+}
+.pullSup {
+  margin-left:-.38em;
+}
+.pullSup--lg {
+  margin-left:-.55em;
+}
+.textLg {
+  font-size:20px !important;
+  line-height:1.4;
+}
+.normalWeight {
+  font-weight:normal !important;
+}
+.list--spaced {
+  li {
+    margin-bottom:.75em;
+  }
+}
+
+
+.pullLeft {
+  margin-left: -30px !important;
+}
+.pullRight {
+  margin-right: -30px !important;
+}
+
+
+ul.list--largeSpacing {
+  li {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.colorWhite {
+  color: #fff !important;
+}
+.width80 {
+  max-width: 80% !important;
+}
+
+.pr-05 {
+  padding-right: .125rem;
+}
+
+
+.nowrap{
+  white-space: nowrap;
+}
+
